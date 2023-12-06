@@ -12,7 +12,7 @@ const f = new aws.lambda.CallbackFunction("f", {
 });
 
 const api = new apigateway.RestAPI("pk-aws-api", {
-    binaryMediaTypes: [],
+    binaryMediaTypes: ["application/json"],
     routes: [{
         path: "/",
         method: "GET",
